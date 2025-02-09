@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الثقافة المصرية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Pyramids_of_Giza_%28February_2008%29.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            height: 120px;
+        }
+
+        header .left-logo {
+            left: 20px;
+        }
+
+        header .right-logo {
+            right: 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main h1 {
+            color: #003366;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            max-width: 400px;
+            border: 2px solid #003366;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-container button:hover {
+            background-color: #005599;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            width: calc(50% - 10px);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #005599;
+        }
+
+        /* Hide gallery items initially */
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        /* Message when no results are found */
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: red;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://th.bing.com/th/id/OIP.uweD7nJUND_vWp4VTYNJ5gHaE1?rs=1&pid=ImgDetMain" alt="شعار مصر" class="left-logo">
+    <h1>الثقافة المصرية</h1>
+    <img src="https://yt3.ggpht.com/ytc/AMLnZu8BMMC_bSEwMRer0TJlP0dn8I8ecLvbnVxuEZYIFw=s900-c-k-c0x00ffffff-no-rj" alt="شعار مصر" class="right-logo">
+</header>
+
+<main>
+    <a href="الرئيسية.html" class="back-button">الرجوع إلى الصفحة الرئيسية</a>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="ابحث عن صور...">
+        <button onclick="searchImages()">بحث</button>
+    </div>
+
+    <h1>معرض الصور</h1>
+
+    <!-- Message when no results are found -->
+    <div class="no-results" id="noResultsMessage">لا توجد نتائج لبحثك</div>
+
+    <div class="gallery">
+        <div class="gallery-item" data-name="الأهرامات في الجيزة">
+            <p>الأهرامات في الجيزة</p>
+            <img src="https://th.bing.com/th/id/R.908ea5249ec7ef455f1dc89070c54dcd?rik=1xtkGLLTC00ZRQ&pid=ImgRaw&r=0" alt="صورة 1">
+        </div>
+        <div class="gallery-item" data-name="نهر النيل في القاهرة">
+            <p>نهر النيل في القاهرة</p>
+            <img src="https://i.ytimg.com/vi/UK40YKBFusc/maxresdefault.jpg" alt="صورة 2">
+        </div>
+        <div class="gallery-item" data-name="معبد الكرنك في الأقصر">
+            <p>معبد الكرنك في الأقصر</p>
+            <img src="https://th.bing.com/th/id/OIP.XayI9HczRJ3xDeLRwkmWtgHaE7?rs=1&pid=ImgDetMain" alt="صورة 3">
+        </div>
+        <div class="gallery-item" data-name="مكتبة الإسكندرية">
+            <p>مكتبة الإسكندرية</p>
+            <img src="https://th.bing.com/th/id/R.79ed0c81f9597f3eccb27f31d9ea11fd?rik=pflhY8iiPfXkXQ&pid=ImgRaw&r=0" alt="صورة 4">
+        </div>
+        <div class="gallery-item" data-name="متحف القاهرة">
+            <p>متحف القاهرة</p>
+            <img src="https://th.bing.com/th/id/OLC.DNQpJcbBAB83zQ480x360?&rs=1&pid=ImgDetMain" alt="صورة 5">
+        </div>
+        <div class="gallery-item" data-name="وادي الملوك">
+            <p>وادي الملوك</p>
+            <img src="https://th.bing.com/th/id/OIP._ujqppDum4UN00T10wmcJQHaE6?rs=1&pid=ImgDetMain" alt="صورة 6">
+        </div>    
+      <div class="gallery-item" data-name="أبو الهول">
+            <p>أبو الهول</p>
+            <img src="https://th.bing.com/th/id/OIP.SXdnu-85H-bp9DiTff4ORwHaE6?rs=1&pid=ImgDetMain" alt="صورة 7">
+        </div> 
+            <div class="gallery-item" data-name="معبد حتشبسوت">
+            <p>معبد حتشبسوت</p>
+            <img src="https://th.bing.com/th/id/R.798bdbbbf445908809afb786c4dd24b6?rik=%2bW4CxdgPs1UOlg&pid=ImgRaw&r=0" alt="صورة 8">
+        </div>  
+            <div class="gallery-item" data-name="مقبرة توت عنخ آمون">
+            <p>مقبرة توت عنخ آمون</p>
+            <img src="https://th.bing.com/th/id/OIP.xAwghDpfawuAFwzRyKnuQwHaEK?rs=1&pid=ImgDetMain" alt="صورة 9">
+        </div>  
+            <div class="gallery-item" data-name="قلعة صلاح الدين الأيوبي">
+            <p>قلعة صلاح الدين الأيوبي</p>
+            <img src="https://th.bing.com/th/id/R.72453fd7d2d2059c49111626ddc2f231?rik=D33TbcdueeTS6g&pid=ImgRaw&r=0&sres=1&sresct=1" alt="صورة 10">
+        </div>  
+            <div class="gallery-item" data-name="معبد أبو سمبل">
+            <p>معبد أبو سمبل</p>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/2a/1c/cc/42/souvenirs-de-mes-voyages.jpg" alt="صورة 11">
+        </div>  
+            <div class="gallery-item" data-name="جزيرة الفنتين">
+            <p>جزيرة الفنتين</p>
+            <img src="https://th.bing.com/th/id/OIP.ASvD6QqqTiU5Mu1G6DbCiQHaEB?rs=1&pid=ImgDetMain" alt="صورة 12">
+        </div>  
+            <div class="gallery-item" data-name="متحف التحنيط ">
+            <p>متحف التحنيط </p>
+            <img src="https://th.bing.com/th/id/R.01705fad8c8e0cf30d9696b1296000f5?rik=T4pz71qGCInbXA&pid=ImgRaw&r=0" alt="صورة 13">
+        </div>  
+            <div class="gallery-item" data-name="مسجد محمد علي ">
+            <p>مسجد محمد علي </p>
+            <img src="https://th.bing.com/th/id/OIP.rIscmIQmvFX_UTXVp2h8PQHaD4?rs=1&pid=ImgDetMain" alt="صورة 14">
+        </div>  
+            <div class="gallery-item" data-name="متحف الفن الإسلامي ">
+            <p>متحف الفن الإسلامي </p>
+            <img src="https://th.bing.com/th/id/OLC.VPdt2tSSHpxJYw480x360?&rs=1&pid=ImgDetMain" alt="صورة 15">
+        </div>  
+            <div class="gallery-item" data-name="العاصمة الإدارية الجديدة ">
+            <p>العاصمة الإدارية الجديدة </p>
+            <img src="https://th.bing.com/th/id/R.be6e8baabfd18f76b60296192caf4c8f?rik=AWaJ6Zx1zIWqlw&pid=ImgRaw&r=0" alt="صورة 16">
+        </div>  
+            <div class="gallery-item" data-name="مدينة العلمين الجديدة ">
+            <p>مدينة العلمين الجديدة </p>
+            <img src="https://th.bing.com/th/id/OIP.xr1IgHfzCMFxAzjv0wVZjgHaDh?rs=1&pid=ImgDetMain" alt="صورة 17">
+        </div>  
+            <div class="gallery-item" data-name=" مشروع قناة السويس الجديدة ">
+            <p> مشروع قناة السويس الجديدة </p>
+            <img src="https://th.bing.com/th/id/OIP.nA9XGvU4JHiZXiQrALmYNAHaEK?rs=1&pid=ImgDetMain" alt="صورة 18">
+        </div>  
+            <div class="gallery-item" data-name=" تطوير شبكة الطرق والكباري ">
+            <p> تطوير شبكة الطرق والكباري </p>
+            <img src="https://th.bing.com/th/id/OIP.TjqFgcNvnMURVJ9VOPCbIwHaED?rs=1&pid=ImgDetMain" alt="صورة 19">
+        </div>  
+            <div class="gallery-item" data-name=" مسجد الفتاح العليم ">
+            <p> مسجد الفتاح العليم </p>
+            <img src="https://th.bing.com/th/id/OIP.j-lYsQEzC69W3Ss_LH0baQHaFj?rs=1&pid=ImgDetMain" alt="صورة 20
+      </div>
+
+<footer>
+    <p>هذا الموقع برعاية: السيدة الفاضلة إنتصار السيسي</p>
+</footer>
+
+<script>
+    function searchImages() {
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        var galleryItems = document.querySelectorAll('.gallery-item');
+        var noResultsMessage = document.getElementById('noResultsMessage');
+        var resultsFound = false;
+
+        galleryItems.forEach(function(item) {
+            var imageName = item.getAttribute('data-name').toLowerCase();
+            if (imageName.includes(input)) {
+                item.classList.remove('hidden');
+                resultsFound = true;
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+
+        // Show or hide the "no results" message
+        if (resultsFound) {
+            noResultsMessage.style.display = 'none';
+        } else {
+            noResultsMessage.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>

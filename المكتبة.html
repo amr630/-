@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الثقافة المصرية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Pyramids_of_Giza_%28February_2008%29.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            height: 120px;
+        }
+
+        header .left-logo {
+            left: 20px;
+        }
+
+        header .right-logo {
+            right: 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #005599;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .back-btn:hover {
+            background-color: #003366;
+        }
+
+        .search-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            font-size: 18px;
+            border: 2px solid #003366;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #005599;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 15px;
+            max-height: 450px;
+            object-fit: cover;
+        }
+
+        .gallery-item h2 {
+            font-size: 20px;
+            color: #003366;
+            margin: 10px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .download-btn:hover {
+            background-color: #005599;
+        }
+
+        .no-results {
+            text-align: center;
+            color: red;
+            font-size: 22px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        footer a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://th.bing.com/th/id/OIP.uweD7nJUND_vWp4VTYNJ5gHaE1?rs=1&pid=ImgDetMain" alt="شعار مصر" class="left-logo">
+    <h1>الثقافة المصرية</h1>
+    <img src="https://yt3.ggpht.com/ytc/AMLnZu8BMMC_bSEwMRer0TJlP0dn8I8ecLvbnVxuEZYIFw=s900-c-k-c0x00ffffff-no-rj" alt="شعار مصر" class="right-logo">
+    <a href="الرئيسية.html" class="back-btn">الرجوع إلى الصفحة الرئيسية</a>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="ابحث عن الملك...">
+        <button onclick="searchImages()">بحث</button>
+    </div>
+
+    <div class="no-results" id="noResults">لم يتم العثور على أي نتائج. حاول إدخال اسم صحيح للملك.</div>
+</header>
+
+<main>
+    <div class="gallery" id="gallery">
+
+        <div class="gallery-item" data-title="الثالوث في مصر القديمة حتى نهاية الدولة الحديثة 3">
+            <img src="https://th.bing.com/th/id/OIP.FNRUEy79BGUhBsYnXyybHwHaKd?rs=1&pid=ImgDetMain" alt="صورة 1">
+            <h2>الثالوث في مصر القديمة حتى نهاية الدولة الحديثة 3</h2>
+            <a href="الثالوث في مصر القديمة حتى نهاية الدولة الحديثة 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+        <div class="gallery-item" data-title="الحضارة المصرية القديمة 3">
+            <img src="https://th.bing.com/th/id/OIP.1TIeFNN-SDpnatGEgJhf8QHaEM?rs=1&pid=ImgDetMain" alt="صورة 2">
+            <h2>الحضارة المصرية القديمة 3</h2>
+            <a href="الحضارة المصرية القديمة 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+        <div class="gallery-item" data-title="العمارة فى مصر القديمة 3">
+            <img src="https://th.bing.com/th/id/OIP.yZAjE2GIJ6bZAoj42XgwFAHaD0?rs=1&pid=ImgDetMain" alt="صورة 3">
+            <h2>العمارة فى مصر القديمة 3</h2>
+            <a href="العمارة فى مصر القديمة 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+        <div class="gallery-item" data-title="المجتمع الفرعوني 3">
+            <img src="https://th.bing.com/th/id/OIP.i528DemDVli2ZqnvG1-cNAAAAA?rs=1&pid=ImgDetMain" alt="صورة 4">
+            <h2>المجتمع الفرعوني 3</h2>
+            <a href="المجتمع الفرعوني 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+        <div class="gallery-item" data-title="الموتى الفرعونى 3">
+            <img src="https://th.bing.com/th/id/R.d55c076f9df3e2e8833b8f514cb29ba5?rik=AOww%2fV9Gm1OKtw&pid=ImgRaw&r=0" alt="صورة 5">
+            <h2>الموتى الفرعونى 3</h2>
+            <a href="الموتى الفرعونى 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+        <div class="gallery-item" data-title="تاريخ مصر القديمة ج 2 3">
+            <img src="https://th.bing.com/th/id/OIP.QzSOJvxeWdeGehNxxpZZIgAAAA?rs=1&pid=ImgDetMain" alt="صورة 6">
+            <h2>تاريخ مصر القديمة ج 2 3</h2>
+            <a href="تاريخ مصر القديمة ج 2 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+
+        <div class="gallery-item" data-title="تاريخ مصر القديمة عبدالعزيز صالح 3">
+            <img src="https://th.bing.com/th/id/OIP.kCwI5vzvSUlpmiYlYaMIiAHaKe?rs=1&pid=ImgDetMain" alt="صورة 7">
+            <h2>تاريخ مصر القديمة عبدالعزيز صالح 3</h2>
+            <a href="تاريخ مصر القديمة عبدالعزيز صالح 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+        <div class="gallery-item" data-title="صورة المرأة فى العصور القديمة إفريل كاميرون وإميلى كوهرن 3">
+            <img src="https://th.bing.com/th/id/OIP.chN-k2CJrN3w3HeFgBTmeAHaJQ?rs=1&pid=ImgDetMain" alt="صورة 8">
+            <h2>صورة المرأة فى العصور القديمة إفريل كاميرون وإميلى كوهرن 3</h2>
+            <a href="صورة المرأة فى العصور القديمة إفريل كاميرون وإميلى كوهرن 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+        <div class="gallery-item" data-title="في الثقافة المصرية">
+            <img src="https://th.bing.com/th/id/OIP.sNCtz6A168Xp8EMPjhvL3wHaK0?rs=1&pid=ImgDetMain" alt="صورة 9">
+            <h2>في الثقافة المصرية</h2>
+            <a href="في الثقافة المصرية.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+        <div class="gallery-item" data-title="كتاب إسلام النجاشي">
+            <img src="https://books-library.net/files/books-library.net-01090549Bi5K3.jpg" alt="صورة 10">
+            <h2>كتاب إسلام النجاشي</h2>
+            <a href="كتاب إسلام النجاشي.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+        <div class="gallery-item" data-title="كتاب الثقافة العربية">
+            <img src="https://th.bing.com/th/id/OIP.4e1-et78aXu1yuTKug0QjQAAAA?rs=1&pid=ImgDetMain" alt="صورة 11">
+            <h2>كتاب الثقافة العربية</h2>
+            <a href="كتاب الثقافة العربية.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+
+        <div class="gallery-item" data-title="كتاب حول الثقافة و التعليم">
+            <img src="https://th.bing.com/th/id/OIP.GsbmQ6Z0byjK_bIPN2TkNQHaK-?rs=1&pid=ImgDetMain" alt="صورة 12">
+            <h2>كتاب حول الثقافة و التعليم</h2>
+            <a href="كتاب حول الثقافة و التعليم.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+        <div class="gallery-item" data-title="كنوز الفراعنة 3">
+            <img src="https://th.bing.com/th/id/OIP.giChsym7Muz6VMnCgsIiQwHaFj?rs=1&pid=ImgDetMain" alt="صورة 13">
+            <h2>كنوز الفراعنة 3</h2>
+            <a href="كنوز الفراعنة 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+        <div class="gallery-item" data-title="لعنة الفراعنة 3">
+            <img src="https://th.bing.com/th/id/OIP.p55gsUCG1FiPPzq9afwI-QHaKk?rs=1&pid=ImgDetMain" alt="صورة 14">
+            <h2>لعنة الفراعنة 3</h2>
+            <a href="لعنة الفراعنة 3.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+        <div class="gallery-item" data-title="مستقبل الثقافة في مصر">
+            <img src="https://th.bing.com/th/id/OIP.4Risaa5MaKJ6p10qcAA4agHaKe?rs=1&pid=ImgDetMain" alt="صورة 15">
+            <h2>مستقبل الثقافة في مصر</h2>
+            <a href="مستقبل الثقافة في مصر.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+        <div class="gallery-item" data-title="مصر القديمة الجزء السابع عشر الأدب المصري القديم">
+            <img src="https://th.bing.com/th/id/OIP.TfkHmLYyXVs9mZ4xG6xepgAAAA?rs=1&pid=ImgDetMain" alt="صورة 16">
+            <h2>مصر القديمة الجزء السابع عشر الأدب المصري القديم</h2>
+            <a href="مصر القديمة الجزء السابع عشر الأدب المصري القديم.pdf" class="download-btn" target="_blank">قراءة الكتاب</a>
+        </div>
+
+
+
+
+    </div>
+    <p class="no-results" id="noResults" style="display: none;">لم يتم العثور على نتائج</p>
+</main>
+
+<footer>
+    <p>هذا الموقع برعاية: السيدة الفاضلة إنتصار السيسي</p>
+</footer>
+
+<script>
+    function searchImages() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        let found = false;
+
+        galleryItems.forEach(item => {
+            const title = item.getAttribute('data-title').toLowerCase();
+            if (title.includes(input)) {
+                item.style.display = 'block';
+                found = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        const noResults = document.getElementById('noResults');
+        if (!found) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

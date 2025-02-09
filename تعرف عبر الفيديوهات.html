@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الثقافة المصرية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Pyramids_of_Giza_%28February_2008%29.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            height: 120px;
+        }
+
+        header .left-logo {
+            left: 20px;
+        }
+
+        header .right-logo {
+            right: 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .links {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav .links a {
+            text-decoration: none;
+            color: #003366;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 8px 15px;
+            transition: background 0.3s;
+        }
+
+        nav .links a:hover {
+            background-color: #003366;
+            color: white;
+            border-radius: 5px;
+        }
+
+        nav .contact-btn {
+            margin-left: auto;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #003366;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        nav .contact-btn:hover {
+            background-color: #005599;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main h1 {
+            color: #003366;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            font-size: 22px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        footer a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #005599;
+        }
+
+        .back-btn {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: #005599;
+        }
+
+        /* تصميم الفيديوهات */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .video-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .video-container iframe {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://th.bing.com/th/id/OIP.uweD7nJUND_vWp4VTYNJ5gHaE1?rs=1&pid=ImgDetMain" alt="شعار مصر" class="left-logo">
+    <h1>الثقافة المصرية</h1>
+    <img src="https://yt3.ggpht.com/ytc/AMLnZu8BMMC_bSEwMRer0TJlP0dn8I8ecLvbnVxuEZYIFw=s900-c-k-c0x00ffffff-no-rj" alt="شعار مصر" class="right-logo">
+</header>
+
+<!-- زر الرجوع إلى الصفحة السابقة -->
+<a href="الرئيسية.html" class="back-btn">الرجوع إلى الصفحة الرئيسية</a>
+
+<main>
+    <h1>فيديوهات عن الثقافة المصرية</h1>
+    <div class="video-container">
+        <!-- الفيديوهان العلويان -->
+        <div class="video-row">
+            <iframe src="https://www.youtube.com/embed/SMqq3CCD0wY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Gi0D5vHzimE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- الفيديو السفلي -->
+        <div>
+            <iframe src="https://www.youtube.com/embed/vSU313tnNI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>هذا الموقع برعاية: السيدة الفاضلة انتصار السيسي</p>
+</footer>
+
+</body>
+</html>

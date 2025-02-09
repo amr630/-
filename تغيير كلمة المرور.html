@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغيير كلمة المرور</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1593642634367-d91a135587b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            font-size: 20px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .footer .white {
+            color: white;
+        }
+        .footer .yellow {
+            color: yellow;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+        }
+        .logo-left {
+            left: 20px;
+        }
+        .logo-right {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://th.bing.com/th/id/OIP.9Dccy8Hp_4gfSk4T4FpDLgHaE8?rs=1&pid=ImgDetMain" alt="شعار اليسار" class="logo logo-left" width="150px">
+    <img src="https://th.bing.com/th/id/OIP.4ve4zACsz1LZOlMcCUHGBAHaE8?rs=1&pid=ImgDetMain" alt="شعار اليمين" class="logo logo-right" width="150px">
+
+    <div class="container">
+        <h2>تغيير كلمة المرور</h2>
+        <form id="changePasswordForm" onsubmit="return handlePasswordChange(event)">
+            <label for="newPassword">كلمة المرور الجديدة:</label><br>
+            <input type="password" id="newPassword" name="newPassword" required style="width: 100%; padding: 10px; font-size: 18px; margin: 10px 0;"><br>
+
+            <label for="confirmPassword">تأكيد كلمة المرور:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required style="width: 100%; padding: 10px; font-size: 18px; margin: 10px 0;"><br>
+
+            <button type="submit">تم</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p><span class="white">هذا الموقع برعاية</span> <span class="yellow">السيدة الفاضلة إنتصار السيسي</span></p>
+    </div>
+
+    <script>
+        function handlePasswordChange(event) {
+            event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
+
+            var newPassword = document.getElementById('newPassword').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // التحقق من طول كلمة المرور الجديدة
+            if (newPassword.length < 8) {
+                alert("كلمة المرور يجب أن تكون أكثر من 8 حروف.");
+                return false;
+            }
+
+            // التحقق من تطابق كلمة المرور الجديدة مع تأكيد كلمة المرور
+            if (newPassword !== confirmPassword) {
+                alert("كلمة المرور غير متطابقة!");
+                return false;
+            }
+
+            // حفظ كلمة المرور الجديدة في localStorage
+            localStorage.setItem("password", newPassword);
+
+            // التنقل إلى صفحة تسجيل الدخول
+            alert("تم تغيير كلمة المرور بنجاح!");
+            window.location.href = "تسجيل الدخول.html"; // الانتقال إلى صفحة تسجيل الدخول
+        }
+    </script>
+
+</body>
+</html>
