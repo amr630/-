@@ -19,7 +19,7 @@
         header {
             background-color: #003366;
             color: white;
-            padding: 20px;
+            padding: 20px 20px;
             text-align: center;
             position: relative;
         }
@@ -27,7 +27,7 @@
         header img {
             position: absolute;
             top: 10px;
-            height: 120px;
+            height: 120px; /* تكبير حجم الشعار */
         }
 
         header .left-logo {
@@ -44,48 +44,129 @@
         }
 
         nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #f4f4f4;
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         nav .links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* جعل كل 3 أزرار في صف */
-            gap: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
         nav .links a {
-            display: block;
-            padding: 10px;
-            background-color: #e0e0e0;
             text-decoration: none;
             color: #003366;
+            font-size: 20px;
             font-weight: bold;
-            border-radius: 5px;
+            margin: 0 15px;
+            padding: 8px 15px;
             transition: background 0.3s;
         }
 
         nav .links a:hover {
             background-color: #003366;
             color: white;
+            border-radius: 5px;
         }
 
-        @media (max-width: 768px) {
-            nav .links {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        nav .contact-btn {
+            margin-left: auto;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #003366;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
-        @media (max-width: 480px) {
-            nav .links {
-                grid-template-columns: repeat(1, 1fr);
-            }
+        nav .contact-btn:hover {
+            background-color: #005599;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main h1 {
+            color: #003366;
+            font-size: 36px; /* تكبير الخط */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            font-size: 22px; /* تكبير الخط */
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 24px; /* تكبير الجملة الأخيرة */
+            font-weight: bold;
+        }
+
+        footer a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #005599;
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -147,8 +228,9 @@
 </section>
 
 <footer>
+    <p>هذا الموقع برعاية: السيدة الفاضلة إنتصار السيسي</p>
     <p>هذا بعمل الطالب: عمرو حمادة فايز</p>
 </footer>
 
 </body>
-</html>
+</html>   
