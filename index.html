@@ -24,6 +24,20 @@
             position: relative;
         }
 
+        header img {
+            position: absolute;
+            top: 10px;
+            height: 120px;
+        }
+
+        header .left-logo {
+            left: 20px;
+        }
+
+        header .right-logo {
+            right: 20px;
+        }
+
         header h1 {
             font-size: 48px;
             font-weight: bold;
@@ -35,24 +49,21 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* تنسيق الأزرار ليكون كل 3 في صف */
         nav .links {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 أزرار في كل صف */
-            gap: 10px; /* مسافة بين الأزرار */
-            justify-items: center; /* توسيط الأزرار في كل خلية */
+            grid-template-columns: repeat(3, 1fr); /* جعل كل 3 أزرار في صف */
+            gap: 10px;
+            text-align: center;
         }
 
         nav .links a {
-            text-decoration: none;
-            color: #003366;
-            font-size: 20px;
-            font-weight: bold;
+            display: block;
             padding: 10px;
             background-color: #e0e0e0;
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
             border-radius: 5px;
-            text-align: center;
-            width: 80%; /* تحديد عرض مناسب للأزرار */
             transition: background 0.3s;
         }
 
@@ -61,54 +72,20 @@
             color: white;
         }
 
-        nav .contact-btn {
-            display: block;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            background-color: #003366;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 20px auto;
-            width: 200px;
-        }
-
-        nav .contact-btn:hover {
-            background-color: #005599;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        footer {
-            text-align: center;
-            background-color: #003366;
-            color: white;
-            padding: 20px 0;
-            width: 100%;
-        }
-
         @media (max-width: 768px) {
             nav .links {
-                grid-template-columns: repeat(2, 1fr); /* زرارين في كل صف على الشاشات الصغيرة */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 480px) {
             nav .links {
-                grid-template-columns: repeat(1, 1fr); /* زر واحد في كل صف على الهواتف */
+                grid-template-columns: repeat(1, 1fr);
             }
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -170,7 +147,6 @@
 </section>
 
 <footer>
-    <p>هذا الموقع برعاية: السيدة الفاضلة إنتصار السيسي</p>
     <p>هذا بعمل الطالب: عمرو حمادة فايز</p>
 </footer>
 
